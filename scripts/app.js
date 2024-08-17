@@ -75,7 +75,7 @@ const app = Vue.createApp({
         },
         async asyncgetRandomFact() {
             try {
-                const response = awaitfetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en');
+                const response = awaitfetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language');
                 if (!response.ok) {
                     thrownewError('Failed to retrieve random fact');
                 }

@@ -33,7 +33,7 @@ const app = Vue.createApp({
     },
     methods: {
         async asyncgetWeather() {
-            const weatherUrl = 'https://goweather.herokuapp.com/weather/London%20Ontario';
+            const weatherUrl = ' https://weather-data.liamstewart.ca/?city=Toronto';
             try {
                 if (this.city.toLowerCase() === 'toronto') {
                     this.weather = {
@@ -75,7 +75,7 @@ const app = Vue.createApp({
         },
         async asyncgetRandomFact() {
             try {
-                const response = awaitfetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language');
+                const response = awaitfetch('https://uselessfacts.jsph.pl/api/v2/facts/random');
                 if (!response.ok) {
                     thrownewError('Failed to retrieve random fact');
                 }
